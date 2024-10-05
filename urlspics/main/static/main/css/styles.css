@@ -70,12 +70,13 @@ button {
     position: absolute;
     top: 0;
     right: 0;
-    width: 200px;
+    cursor: pointer;
 }
 .delete-for-photo {
     position: absolute;
     bottom: 0;
     right: 0;
+    cursor: pointer;
 }
 .wrap-picture-front {
     display: flex;

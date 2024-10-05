@@ -32,10 +32,21 @@ const createImageBlock= function(item, fileElem) {
     newButton.setAttribute("class", "delete-for-photo");
     newButton.onclick = createUrlForPic;
 
+    let deleteButton = document.createElement('button');
+    deleteButton.innerHTML = "Удалить";
+    deleteButton.setAttribute("class", "select-for-photo");
+    deleteButton.onclick = deleteButtonLogic.bind(deleteButton);
+
     newDiv.appendChild(myImage);
     newDiv.appendChild(newButton);
+    newDiv.appendChild(deleteButton);
     mainBlock.appendChild(newDiv);
     
+}
+
+const deleteButtonLogic = async function() {
+    this.parentNode.remove();  
+    document.getElementById("UResult").value = "";
 }
 
 const createUrlForPic = async function() {
